@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4D628D7652F00EF55F3 /* MainView.swift */; };
+		7AC7D4D928D795B100EF55F3 /* PromiseEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4D828D795B100EF55F3 /* PromiseEmptyView.swift */; };
 		89D1639728D736040079A697 /* MAROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639628D736040079A697 /* MAROApp.swift */; };
 		89D1639928D736040079A697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639828D736040079A697 /* ContentView.swift */; };
 		89D1639B28D736070079A697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639A28D736070079A697 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		7AC7D4D628D7652F00EF55F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7AC7D4D828D795B100EF55F3 /* PromiseEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseEmptyView.swift; sourceTree = "<group>"; };
 		89D1639328D736040079A697 /* MARO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D1639628D736040079A697 /* MAROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAROApp.swift; sourceTree = "<group>"; };
 		89D1639828D736040079A697 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				89D163A528D736290079A697 /* SampleView.swift */,
 				7AC7D4D628D7652F00EF55F3 /* MainView.swift */,
+				7AC7D4D828D795B100EF55F3 /* PromiseEmptyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				89D1639928D736040079A697 /* ContentView.swift in Sources */,
 				7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */,
+				7AC7D4D928D795B100EF55F3 /* PromiseEmptyView.swift in Sources */,
 				89D163AC28D736450079A697 /* SampleModel.swift in Sources */,
 				89D163A628D736290079A697 /* SampleView.swift in Sources */,
 				89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */,
