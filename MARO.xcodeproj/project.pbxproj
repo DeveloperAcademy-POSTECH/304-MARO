@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B9E2128D73ED7003D9741 /* PromiseCreation.swift */; };
 		89D1639728D736040079A697 /* MAROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639628D736040079A697 /* MAROApp.swift */; };
 		89D1639928D736040079A697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639828D736040079A697 /* ContentView.swift */; };
 		89D1639B28D736070079A697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639A28D736070079A697 /* Assets.xcassets */; };
 		89D1639E28D736070079A697 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639D28D736070079A697 /* Preview Assets.xcassets */; };
-		89D163A628D736290079A697 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163A528D736290079A697 /* SampleView.swift */; };
 		89D163A928D736360079A697 /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163A828D736360079A697 /* SampleViewModel.swift */; };
 		89D163AC28D736450079A697 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AB28D736450079A697 /* SampleModel.swift */; };
 		89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AE28D7365D0079A697 /* SampleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101B9E2128D73ED7003D9741 /* PromiseCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseCreation.swift; sourceTree = "<group>"; };
 		89D1639328D736040079A697 /* MARO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D1639628D736040079A697 /* MAROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAROApp.swift; sourceTree = "<group>"; };
 		89D1639828D736040079A697 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89D1639A28D736070079A697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D1639D28D736070079A697 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		89D163A528D736290079A697 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		89D163A828D736360079A697 /* SampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewModel.swift; sourceTree = "<group>"; };
 		89D163AB28D736450079A697 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		89D163AE28D7365D0079A697 /* SampleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleExtension.swift; sourceTree = "<group>"; };
@@ -65,6 +65,7 @@
 				89D163A428D7361E0079A697 /* View */,
 				89D1639828D736040079A697 /* ContentView.swift */,
 				89D1639628D736040079A697 /* MAROApp.swift */,
+				101B9E2128D73ED7003D9741 /* PromiseCreation.swift */,
 				89D1639A28D736070079A697 /* Assets.xcassets */,
 				89D1639C28D736070079A697 /* Preview Content */,
 			);
@@ -82,7 +83,6 @@
 		89D163A428D7361E0079A697 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89D163A528D736290079A697 /* SampleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D1639928D736040079A697 /* ContentView.swift in Sources */,
+				101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */,
 				89D163AC28D736450079A697 /* SampleModel.swift in Sources */,
-				89D163A628D736290079A697 /* SampleView.swift in Sources */,
 				89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */,
 				89D163A928D736360079A697 /* SampleViewModel.swift in Sources */,
 				89D1639728D736040079A697 /* MAROApp.swift in Sources */,
