@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PromiseListView: View {
     let sampleArray: [PromiseModel]
+    let bottomPartHeight: CGFloat = Constant.screenHeight * 0.7
     
     init(_ sampleArray: [PromiseModel]) {
         self.sampleArray = sampleArray
@@ -19,7 +20,7 @@ struct PromiseListView: View {
             Rectangle()
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .ignoresSafeArea()
-                .frame(maxHeight: 300)
+                .frame(height: Constant.screenHeight * 0.3)
                 .foregroundColor(.gray)
                 .overlay {
                     VStack {
@@ -28,7 +29,6 @@ struct PromiseListView: View {
                         Button { } label: { Text("약속 추가하기") }
                     }
                 }
-                .padding(.bottom, 30)
             
             ScrollView (showsIndicators: false) {
                 VStack {
@@ -40,13 +40,15 @@ struct PromiseListView: View {
                                 position: geometry.frame(in: .global).midY
                             )
                         }
-                        .frame(height: UIScreen.main.bounds.height / 11)
+                        .frame(minHeight: bottomPartHeight * 0.1)
+                        .padding(.bottom, bottomPartHeight * 0.1 * 0.5)
                     }
                     
                     Spacer()
-                        .frame(height: UIScreen.main.bounds.height / 2 - 80)
+                        .frame(height: bottomPartHeight * 0.85)
                 }
             }
+            .frame(height: bottomPartHeight)
             
             Spacer()
             

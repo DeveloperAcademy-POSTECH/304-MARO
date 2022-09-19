@@ -18,7 +18,7 @@ struct ListComponent: View {
         HStack {
             VStack (alignment: .leading) {
                 Text("\(number)")
-                Text(promise)
+                Text("\(promise) \(position)")
             }
             
             Spacer()
@@ -30,7 +30,7 @@ struct ListComponent: View {
         .opacity(number == 1 ? 1 : opacity)
         .scaleEffect(number == 1 ? 1 : scale)
         .onChange(of: position) { newValue in
-            if newValue <= (UIScreen.main.bounds.height / 2) + 20 {
+            if newValue <= (Constant.screenHeight * 0.4)  {
                 withAnimation {
                     opacity = 1.0
                     scale = 1.0

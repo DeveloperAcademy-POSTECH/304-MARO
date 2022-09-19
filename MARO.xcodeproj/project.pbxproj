@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A66D7A628D81B350039E385 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66D7A528D81B350039E385 /* View.swift */; };
+		7A66D7A828D81E000039E385 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66D7A728D81E000039E385 /* Constant.swift */; };
 		7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4D628D7652F00EF55F3 /* MainView.swift */; };
 		7AC7D4D928D795B100EF55F3 /* PromiseEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4D828D795B100EF55F3 /* PromiseEmptyView.swift */; };
 		7AC7D4DB28D795FC00EF55F3 /* PromiseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		7A66D7A528D81B350039E385 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		7A66D7A728D81E000039E385 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7AC7D4D628D7652F00EF55F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7AC7D4D828D795B100EF55F3 /* PromiseEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseEmptyView.swift; sourceTree = "<group>"; };
 		7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseListView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				89D163AE28D7365D0079A697 /* SampleExtension.swift */,
 				7A66D7A528D81B350039E385 /* View.swift */,
+				7A66D7A728D81E000039E385 /* Constant.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				89D1639728D736040079A697 /* MAROApp.swift in Sources */,
 				7A66D7A628D81B350039E385 /* View.swift in Sources */,
 				7AC7D4DB28D795FC00EF55F3 /* PromiseListView.swift in Sources */,
+				7A66D7A828D81E000039E385 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
