@@ -30,25 +30,23 @@ struct PromiseListView: View {
                 .padding(.bottom, 30)
             
             ScrollView (showsIndicators: false) {
-                ZStack {
-                    VStack {
-                        ForEach(sampleArray, id: \.self) { data in
-                            GeometryReader { geometry in
-                                ListComponent(
-                                    number: data.number,
-                                    promise: data.promise,
-                                    position: geometry.frame(in: .global).midY
-                                )
-                            }
-                            .frame(height: UIScreen.main.bounds.height / 11)
+                VStack {
+                    ForEach(sampleArray, id: \.self) { data in
+                        GeometryReader { geometry in
+                            ListComponent(
+                                number: data.number,
+                                promise: data.promise,
+                                position: geometry.frame(in: .global).midY
+                            )
                         }
-                        
-                        Spacer()
-                            .frame(height: UIScreen.main.bounds.height / 2 - 80)
+                        .frame(height: UIScreen.main.bounds.height / 11)
                     }
+                    
+                    Spacer()
+                        .frame(height: UIScreen.main.bounds.height / 2 - 80)
                 }
             }
-
+            
             Spacer()
             
         }// VStack
