@@ -16,7 +16,8 @@ struct PromiseListView: View {
     
     var body: some View {
         VStack {
-            RoundedRectangle(cornerRadius: 30)
+            Rectangle()
+                .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .ignoresSafeArea()
                 .frame(maxHeight: 300)
                 .foregroundColor(.gray)
