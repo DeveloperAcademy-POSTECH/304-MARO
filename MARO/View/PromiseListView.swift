@@ -20,15 +20,44 @@ struct PromiseListView: View {
             Rectangle()
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .ignoresSafeArea()
-                .frame(height: Constant.screenHeight * 0.3)
-                .foregroundColor(.gray)
-                .padding(.bottom, 20)
+                .frame(height: Constant.screenHeight * 0.35)
+                .foregroundColor(.mainPurple)
+                .padding(.bottom)
                 .overlay {
                     VStack {
-                        Text("오늘은 1번 약속을 지켜볼까요?")
-                        Text("오늘의 약속")
-                        Button { } label: { Text("약속 추가하기") }
+                        HStack {
+                            Image("cloudTwo")
+                                .padding(.trailing, 400)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
+                            Image("cloudOne")
+                        }
+                        .padding(.bottom, 40)
+
                     }
+
+                    VStack (alignment: .center) {
+                        Spacer()
+                        
+                        Text("오늘은 1번 약속을 지켜볼까요?")
+                            .font(.body)
+                            .fontWeight(.light)
+                            .padding(.bottom)
+                        Text("동해물과 백두산이 마르고 닳도록 하느님이 보우하사")
+                            .font(.title2)
+                            .fontWeight(.medium)
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom)
+                        
+                        // TODO: Link Promise Creation View with NavigationLink
+                        PromiseCreationButton { }
+                        
+                        Spacer()
+                    }
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 150)
                 }
             
             ScrollView (showsIndicators: false) {
@@ -38,27 +67,53 @@ struct PromiseListView: View {
                             ListComponent(
                                 number: data.number,
                                 promise: data.promise,
-                                position: geometry.frame(in: .global).midY
+                                category: data.category
                             )
                         }
-                        .frame(minHeight: bottomPartHeight * 0.1)
-                        .padding(.bottom, bottomPartHeight * 0.1 * 0.5)
+                        .frame(minHeight: bottomPartHeight * 0.15)
+                        .padding(.bottom, bottomPartHeight * 0.1 * 0.25)
                     }
                 }
+                .padding(.horizontal)
             }
             
             Spacer()
             
         }// VStack
+        .background(Color.backgroundWhite)
     }// body
 }// PromiseListView
 
 struct PromiseListView_Previews: PreviewProvider {
     static let sampleArray: [PromiseModel] = [
-        PromiseModel(number: 1, promise: "긍정적인 생각하기")
+        PromiseModel(number: 1, promise: "긍정적인 생각하기", category: .study)
     ]
     
     static var previews: some View {
         PromiseListView(sampleArray)
     }
 }
+
+// MARK: PromiseCreationButton
+struct PromiseCreationButton: View {
+    var action: () -> Void
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+    
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            Text("+ 새 약속 만들기")
+                .fontWeight(.semibold)
+                .padding(.vertical, 10)
+                .padding(.horizontal, 28)
+                .overlay {
+                    Capsule().stroke(.white, lineWidth: 1)
+                }
+        }// Button
+        
+    }// body
+}// PromiseCreationButton

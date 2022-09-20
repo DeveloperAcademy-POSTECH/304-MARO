@@ -19,4 +19,10 @@ extension Color {
 
     static let backgroundWhite: Color = Color("backgroundWhite")
     static let backgroundGray: Color = Color("backgroundGray")
+    
+    static let lifeBlue: Color = Color("lifeBlue")
+    static let occupationBlue: Color = Color("occupationBlue")
+    static let relationshipBlue: Color = Color("relationshipBlue")
+    static let selfImprovementBlue: Color = Color("selfImprovementBlue")
+    static let studyBlue: Color = Color("studyBlue")
 }
