@@ -23,42 +23,7 @@ struct PromiseListView: View {
                 .frame(height: Constant.screenHeight * 0.35)
                 .foregroundColor(.mainPurple)
                 .padding(.bottom)
-                .overlay {
-                    VStack {
-                        HStack {
-                            Image("cloudTwo")
-                                .padding(.trailing, 400)
-                            Spacer()
-                        }
-                        HStack {
-                            Spacer()
-                            Image("cloudOne")
-                        }
-                        .padding(.bottom, 40)
-
-                    }
-
-                    VStack (alignment: .center) {
-                        Spacer()
-                        
-                        Text("오늘은 1번 약속을 지켜볼까요?")
-                            .font(.body)
-                            .fontWeight(.light)
-                            .padding(.bottom)
-                        Text("동해물과 백두산이 마르고 닳도록 하느님이 보우하사")
-                            .font(.title2)
-                            .fontWeight(.medium)
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom)
-                        
-                        // TODO: Link Promise Creation View with NavigationLink
-                        PromiseCreationButton { }
-                        
-                        Spacer()
-                    }
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 150)
-                }
+                .overlay { overlayView }
             
             ScrollView (showsIndicators: false) {
                 VStack {
@@ -82,6 +47,44 @@ struct PromiseListView: View {
         }// VStack
         .background(Color.backgroundWhite)
     }// body
+    
+    private var overlayView: some View {
+        ZStack {
+            VStack {
+                HStack {
+                    Image("cloudTwo")
+                        .padding(.trailing, 400)
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    Image("cloudOne")
+                }
+                .padding(.bottom, 40)
+
+            }
+
+            VStack (alignment: .center) {
+                Spacer()
+                
+                Text("오늘은 1번 약속을 지켜볼까요?")
+                    .font(.subheadline)
+                    .padding(.bottom)
+                Text("동해물과 백두산이 마르고 닳도록 하느님이 보우하사")
+                    .font(.title2)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom)
+                
+                // TODO: Link Promise Creation View with NavigationLink
+                PromiseCreationButton { }
+                
+                Spacer()
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal, 150)
+        }
+    }
+    
 }// PromiseListView
 
 struct PromiseListView_Previews: PreviewProvider {
