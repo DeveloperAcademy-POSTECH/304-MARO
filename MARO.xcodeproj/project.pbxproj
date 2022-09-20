@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1E497528D9C0DE00C11481 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E497428D9C0DE00C11481 /* Color.swift */; };
 		7A66D7A628D81B350039E385 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66D7A528D81B350039E385 /* View.swift */; };
 		7A66D7A828D81E000039E385 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66D7A728D81E000039E385 /* Constant.swift */; };
 		7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4D628D7652F00EF55F3 /* MainView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A1E497428D9C0DE00C11481 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7A66D7A528D81B350039E385 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7A66D7A728D81E000039E385 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7AC7D4D628D7652F00EF55F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				89D163AE28D7365D0079A697 /* SampleExtension.swift */,
 				7A66D7A528D81B350039E385 /* View.swift */,
 				7A66D7A728D81E000039E385 /* Constant.swift */,
+				7A1E497428D9C0DE00C11481 /* Color.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */,
 				7AC7D4D928D795B100EF55F3 /* PromiseEmptyView.swift in Sources */,
 				7AC7D4DD28D7967E00EF55F3 /* ListComponent.swift in Sources */,
+				7A1E497528D9C0DE00C11481 /* Color.swift in Sources */,
 				89D163AC28D736450079A697 /* SampleModel.swift in Sources */,
 				89D163A628D736290079A697 /* SampleView.swift in Sources */,
 				89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */,
