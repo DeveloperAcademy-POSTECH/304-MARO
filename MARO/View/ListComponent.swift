@@ -27,21 +27,6 @@ struct ListComponent: View {
         .frame(maxWidth: .infinity)
         .background(.gray.opacity(0.2))
         .padding(.horizontal)
-        .opacity(number == 1 ? 1 : opacity)
-        .scaleEffect(number == 1 ? 1 : scale)
-        .onChange(of: position) { newValue in
-            if newValue <= (Constant.screenHeight * 0.4)  {
-                withAnimation {
-                    opacity = 1.0
-                    scale = 1.0
-                }
-            } else {
-                withAnimation {
-                    opacity = 0.3
-                    scale = 0.95
-                }
-            }
-        }
     }
 }
 

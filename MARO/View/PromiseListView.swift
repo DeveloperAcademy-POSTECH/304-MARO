@@ -22,6 +22,7 @@ struct PromiseListView: View {
                 .ignoresSafeArea()
                 .frame(height: Constant.screenHeight * 0.3)
                 .foregroundColor(.gray)
+                .padding(.bottom, 20)
                 .overlay {
                     VStack {
                         Text("오늘은 1번 약속을 지켜볼까요?")
@@ -43,12 +44,8 @@ struct PromiseListView: View {
                         .frame(minHeight: bottomPartHeight * 0.1)
                         .padding(.bottom, bottomPartHeight * 0.1 * 0.5)
                     }
-                    
-                    Spacer()
-                        .frame(height: bottomPartHeight * 0.85)
                 }
             }
-            .frame(height: bottomPartHeight)
             
             Spacer()
             
