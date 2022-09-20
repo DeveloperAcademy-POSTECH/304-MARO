@@ -28,21 +28,17 @@ struct PromiseListView: View {
             ScrollView (showsIndicators: false) {
                 VStack {
                     ForEach(sampleArray, id: \.self) { data in
-                        GeometryReader { geometry in
-                            ListComponent(
-                                number: data.number,
-                                promise: data.promise,
-                                category: data.category
-                            )
-                        }
+                        ListComponent(
+                            number: data.number,
+                            promise: data.promise,
+                            category: data.category
+                        )
                         .frame(minHeight: bottomPartHeight * 0.15)
                         .padding(.bottom, bottomPartHeight * 0.1 * 0.25)
                     }
                 }
                 .padding(.horizontal)
             }
-            
-            Spacer()
             
         }// VStack
         .background(Color.backgroundWhite)
@@ -61,9 +57,9 @@ struct PromiseListView: View {
                     Image("cloudOne")
                 }
                 .padding(.bottom, 40)
-
+                
             }
-
+            
             VStack (alignment: .center) {
                 Spacer()
                 
