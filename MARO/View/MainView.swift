@@ -36,11 +36,7 @@ struct MainView: View {
     ]
     
     var body: some View {
-        if sampleArray.count == 0 {
-            PromiseEmptyView()
-        } else {
-            PromiseListView(sampleArray)
-        }
+        PromiseListView(sampleArray)
         
     }// body
 }// MainView
