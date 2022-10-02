@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10148B6828DED488000274B6 /* PromiseContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10148B6628DED488000274B6 /* PromiseContainer.xcdatamodeld */; };
+		10148B6A28DEE18C000274B6 /* PromiseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10148B6928DEE18C000274B6 /* PromiseViewModel.swift */; };
 		101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B9E2128D73ED7003D9741 /* PromiseCreation.swift */; };
 		89D1639728D736040079A697 /* MAROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639628D736040079A697 /* MAROApp.swift */; };
 		89D1639928D736040079A697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639828D736040079A697 /* ContentView.swift */; };
 		89D1639B28D736070079A697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639A28D736070079A697 /* Assets.xcassets */; };
 		89D1639E28D736070079A697 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639D28D736070079A697 /* Preview Assets.xcassets */; };
-		89D163A928D736360079A697 /* SampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163A828D736360079A697 /* SampleViewModel.swift */; };
 		89D163AC28D736450079A697 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AB28D736450079A697 /* SampleModel.swift */; };
 		89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AE28D7365D0079A697 /* SampleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10148B6728DED488000274B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		10148B6928DEE18C000274B6 /* PromiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseViewModel.swift; sourceTree = "<group>"; };
 		101B9E2128D73ED7003D9741 /* PromiseCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseCreation.swift; sourceTree = "<group>"; };
 		89D1639328D736040079A697 /* MARO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D1639628D736040079A697 /* MAROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAROApp.swift; sourceTree = "<group>"; };
 		89D1639828D736040079A697 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89D1639A28D736070079A697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D1639D28D736070079A697 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		89D163A828D736360079A697 /* SampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewModel.swift; sourceTree = "<group>"; };
 		89D163AB28D736450079A697 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		89D163AE28D7365D0079A697 /* SampleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +92,7 @@
 		89D163A728D7362C0079A697 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				89D163A828D736360079A697 /* SampleViewModel.swift */,
+				10148B6928DEE18C000274B6 /* PromiseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				89D163AB28D736450079A697 /* SampleModel.swift */,
+				10148B6628DED488000274B6 /* PromiseContainer.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,8 +187,9 @@
 				89D1639928D736040079A697 /* ContentView.swift in Sources */,
 				101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */,
 				89D163AC28D736450079A697 /* SampleModel.swift in Sources */,
+				10148B6828DED488000274B6 /* PromiseContainer.xcdatamodeld in Sources */,
+				10148B6A28DEE18C000274B6 /* PromiseViewModel.swift in Sources */,
 				89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */,
-				89D163A928D736360079A697 /* SampleViewModel.swift in Sources */,
 				89D1639728D736040079A697 /* MAROApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		10148B6628DED488000274B6 /* PromiseContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				10148B6728DED488000274B6 /* Model.xcdatamodel */,
+			);
+			currentVersion = 10148B6728DED488000274B6 /* Model.xcdatamodel */;
+			path = PromiseContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 89D1638B28D736040079A697 /* Project object */;
 }

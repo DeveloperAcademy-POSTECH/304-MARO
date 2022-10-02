@@ -9,8 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                NavigationLink(destination: PromiseCreation(promiseMemo: "", memo: "",  dropDownList: [""])) {
+                    Text("Go1")
+                }
+            }
+        } else {
+            NavigationView {
+                NavigationLink(destination: PromiseCreation(promiseMemo: "", memo: "")) {
+                    Text("Go2")
+                }
+            }
+        }
     }
 }
 
