@@ -82,15 +82,37 @@ struct OnboardingThirdPage: View {
             Text("나의 하루를 위한 하나의 약속\n마로와 함께해요")
                 .multilineTextAlignment(.center)
                 .padding(.top, 41)
-                .padding(.bottom, 100)
             
             Spacer()
             
-            Button { }
-            label: { Text("시작하기") }
-            
+            CustomButton(text: "시작하기") { }
+                .padding(.bottom, 55)
+             
         }// VStack
     }// body
 }// OnboardingThirdPage
 
+struct CustomButton: View {
+    var text: String
+    var action: () -> Void
 
+    init(text: String, action: @escaping () -> Void) {
+        self.text = text
+        self.action = action
+    }
+
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(maxHeight: 56)
+                .overlay {
+                    Text(text)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+        }
+
+    }// body
+}//CustomButton
