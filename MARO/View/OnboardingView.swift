@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-//    @Binding var isFirstLaunching: Bool
+    //    @Binding var isFirstLaunching: Bool
     @State private var selection: Int = 1
     
     var body: some View {
@@ -18,21 +18,29 @@ struct OnboardingView: View {
                 
                 Button { print("Hello I'm pressed!") }
                 label: { Text("건너뛰기") }
-                .opacity(selection == 3 ? 0 : 1)
-
-        }
-        .padding(.bottom, 65)
-        
-        TabView(selection: $selection) {
-            OnboardingFirstPage().tag(1)
-            OnboardingSecondPage().tag(2)
-            OnboardingThirdPage().tag(3)
-        }
-        .tabViewStyle(PageTabViewStyle())
-        
-    }// VStack
+                    .opacity(selection == 3 ? 0 : 1)
+                
+            }
+            .padding(.bottom, 65)
+            
+            TabView(selection: $selection) {
+                OnboardingFirstPage().tag(1)
+                OnboardingSecondPage().tag(2)
+                OnboardingThirdPage().tag(3)
+            }
+            .tabViewStyle(PageTabViewStyle())
+            
+        }// VStack
         .padding(.horizontal, 20)
-}// body
+        .onAppear { setPageIndicatorColor() }
+    }// body
+    
+    // https://stackoverflow.com/questions/62864221/change-tabview-indicator-swiftui
+    func setPageIndicatorColor() {
+      UIPageControl.appearance().currentPageIndicatorTintColor = .black
+      UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+    }
+    
 }// OnboardingView
 
 struct OnboardingView_Previews: PreviewProvider {
@@ -46,11 +54,11 @@ struct OnboardingFirstPage: View {
     var body: some View {
         VStack {
             Text("나의 하루를 위한 하나의 약속을 확인해요")
-
+            
             Spacer()
-
+            
             Image("onboardingImage1")
-
+            
         }// VStack
     }// body
 }// OnboardingFirstPage
@@ -87,20 +95,21 @@ struct OnboardingThirdPage: View {
             
             CustomButton(text: "시작하기") { }
                 .padding(.bottom, 55)
-             
+            
         }// VStack
     }// body
 }// OnboardingThirdPage
 
+// MARK: Reusable CustomButton Sample
 struct CustomButton: View {
     var text: String
     var action: () -> Void
-
+    
     init(text: String, action: @escaping () -> Void) {
         self.text = text
         self.action = action
     }
-
+    
     var body: some View {
         Button {
             action()
@@ -113,6 +122,5 @@ struct CustomButton: View {
                         .foregroundColor(.white)
                 }
         }
-
     }// body
 }//CustomButton
