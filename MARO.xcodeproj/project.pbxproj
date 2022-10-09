@@ -14,7 +14,7 @@
 		89D1639928D736040079A697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639828D736040079A697 /* ContentView.swift */; };
 		89D1639B28D736070079A697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639A28D736070079A697 /* Assets.xcassets */; };
 		89D1639E28D736070079A697 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639D28D736070079A697 /* Preview Assets.xcassets */; };
-		89D163AC28D736450079A697 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AB28D736450079A697 /* SampleModel.swift */; };
+		89D163AC28D736450079A697 /* ProMiseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AB28D736450079A697 /* ProMiseModel.swift */; };
 		89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D163AE28D7365D0079A697 /* SampleExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		89D1639828D736040079A697 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89D1639A28D736070079A697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D1639D28D736070079A697 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		89D163AB28D736450079A697 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		89D163AB28D736450079A697 /* ProMiseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProMiseModel.swift; sourceTree = "<group>"; };
 		89D163AE28D7365D0079A697 /* SampleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +100,7 @@
 		89D163AA28D7363C0079A697 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				89D163AB28D736450079A697 /* SampleModel.swift */,
+				89D163AB28D736450079A697 /* ProMiseModel.swift */,
 				10148B6628DED488000274B6 /* PromiseContainer.xcdatamodeld */,
 			);
 			path = Model;
@@ -186,7 +186,7 @@
 			files = (
 				89D1639928D736040079A697 /* ContentView.swift in Sources */,
 				101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */,
-				89D163AC28D736450079A697 /* SampleModel.swift in Sources */,
+				89D163AC28D736450079A697 /* ProMiseModel.swift in Sources */,
 				10148B6828DED488000274B6 /* PromiseContainer.xcdatamodeld in Sources */,
 				10148B6A28DEE18C000274B6 /* PromiseViewModel.swift in Sources */,
 				89D163AF28D7365D0079A697 /* SampleExtension.swift in Sources */,

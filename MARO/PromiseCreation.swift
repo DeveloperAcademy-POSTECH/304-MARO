@@ -11,11 +11,9 @@ struct PromiseCreation: View {
     @StateObject var viewModel = PromiseViewModel()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var promiseMemo: String
-    @State var memo: String
+    @State var memoDescription: String
     @State private var chooseCategory = "선택"
-    @State private var isExpanded = false
-    var dropDownList = ["직업","인생","관계","자기계발","학업"]
-//    ["\(category.job)","\(category.life)","\(category.relationship)","\(category.selfImprovement)","\(category.study)"]
+    @State private var promiseNum: Int
 
     var body: some View {
         VStack {
@@ -64,7 +62,7 @@ struct PromiseCreation: View {
                     .padding()
                 Spacer()
             }
-            TextField("메모 내용을 입력해주세요", text: $memo)
+            TextField("메모 내용을 입력해주세요", text: $memoDescription)
                 .padding(.leading)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
@@ -74,8 +72,21 @@ struct PromiseCreation: View {
 
             Spacer()
 
+            List {
+                ForEach(viewModel.saveEntities) { entity in
+                    VStack {
+                        Text(entity.promise ?? "")
+                        Text(entity.category ?? "")
+                        Text(entity.memoDescription ?? "")
+                        Text(entity.dateCreated?.toString() ?? "")
+                    }
+                }
+                .onDelete(perform: viewModel.deletePromise)
+            }
+            .listStyle(PlainListStyle())
+
             Button {
-                print("WorkOut")
+                viewModel.addPromise(promise: promiseMemo, category: chooseCategory, description: memoDescription)
             } label: {
                 Text("약속 추가")
                     .font(.headline)

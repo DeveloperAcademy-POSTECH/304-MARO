@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreData
 
 enum category: String,CaseIterable {
     case study
@@ -29,4 +28,13 @@ enum category: String,CaseIterable {
             return "인간관계"
         }
     }
+}
+
+struct PromiseCreationModel: Identifiable {
+    var id = UUID()
+    var dateCreated: Date
+    var promise: String?
+    var category: String?
+    var description: String?
+
 }

@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 class PromiseViewModel: ObservableObject {
+    static var shared = PromiseViewModel()
+
     let container: NSPersistentContainer
     @Published var saveEntities: [PromiseEntity] = []
 
@@ -29,14 +31,21 @@ class PromiseViewModel: ObservableObject {
         let request = NSFetchRequest<PromiseEntity>(entityName: "PromiseEntity")
         do {
            saveEntities =  try container.viewContext.fetch(request)
+            print("fetch!")
         } catch let error {
             print("Error fetching. \(error)")
         }
     }
 
-    func addPromise(text: String) {
+    func addPromise(promise: String, category: String, description: String) {
         let newPromise = PromiseEntity(context: container.viewContext)
+        newPromise.promise = promise
+        newPromise.category = category
+        newPromise.memoDescription = description
+        newPromise.dateCreated = Date()
+
         savePromise()
+        print("add!")
     }
 
     func deletePromise(indexSet: IndexSet) {
@@ -44,11 +53,14 @@ class PromiseViewModel: ObservableObject {
         let entity = saveEntities[index]
         container.viewContext.delete(entity)
         savePromise()
+        print("delete!")
     }
+    
     func savePromise() {
         do {
             try container.viewContext.save()
             fetchPromise()
+            print("save!")
         } catch let error {
             print("Error saving. \(error)")
         }
