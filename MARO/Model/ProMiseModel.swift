@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum category: String,CaseIterable {
+enum Category: String, CaseIterable {
     case study
     case job
     case life

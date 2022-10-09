@@ -9,21 +9,20 @@ import SwiftUI
 
 struct PromiseCreation: View {
     @StateObject var viewModel = PromiseViewModel()
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var promiseMemo: String
+    @Environment(\.dismiss) private var dismiss
+    @State var promise: String
     @State var memoDescription: String
     @State private var chooseCategory = "선택"
-    @State private var promiseNum: Int
 
     var body: some View {
         VStack {
             HStack {
                 Text("약속 내용")
                 Spacer()
-                //글자수
+                // TODO: 글자 수 기능 구현
             }.padding(.horizontal)
 
-            TextField("약속 내용을 입력해주세요", text: $promiseMemo)
+            TextField("약속 내용을 입력해주세요", text: $promise)
                 .padding(.leading)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
@@ -37,7 +36,7 @@ struct PromiseCreation: View {
             }
             HStack {
                 Menu {
-                    ForEach(category.allCases, id: \.self) { selected in
+                    ForEach(Category.allCases, id: \.self) { selected in
                         Button {
                             self.chooseCategory = selected.categoryName
                         } label: {
@@ -71,7 +70,8 @@ struct PromiseCreation: View {
                 .padding(.horizontal)
 
             Spacer()
-
+            // MARK: CoreData 적용 확인
+            /*
             List {
                 ForEach(viewModel.saveEntities) { entity in
                     VStack {
@@ -84,9 +84,10 @@ struct PromiseCreation: View {
                 .onDelete(perform: viewModel.deletePromise)
             }
             .listStyle(PlainListStyle())
+             */
 
             Button {
-                viewModel.addPromise(promise: promiseMemo, category: chooseCategory, description: memoDescription)
+                viewModel.addPromise(promise: promise, category: chooseCategory, description: memoDescription)
             } label: {
                 Text("약속 추가")
                     .font(.headline)
@@ -98,10 +99,10 @@ struct PromiseCreation: View {
             .padding(.horizontal)
 
         }
-        .navigationTitle(Text ("약속 만들기"))
+        .navigationTitle(Text("약속 만들기"))
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: {
-            presentationMode.wrappedValue.dismiss()
+           dismiss()
         }, label: {
             Image(systemName: "arrow.backward")
         }))
