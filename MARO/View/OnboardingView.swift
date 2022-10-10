@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    //    @Binding var isFirstLaunching: Bool
+    @Binding var isFirstLaunching: Bool
     @State private var selection: Int = 1
     
     var body: some View {
@@ -18,6 +18,7 @@ struct OnboardingView: View {
                 
                 Button { print("Hello I'm pressed!") }
                 label: { Text("건너뛰기") }
+                    .foregroundColor(.mainPurple)
                     .opacity(selection == 3 ? 0 : 1)
                 
             }
@@ -26,7 +27,7 @@ struct OnboardingView: View {
             TabView(selection: $selection) {
                 OnboardingFirstPage().tag(1)
                 OnboardingSecondPage().tag(2)
-                OnboardingThirdPage().tag(3)
+                OnboardingThirdPage(isFirstLaunching: $isFirstLaunching).tag(3)
             }
             .tabViewStyle(PageTabViewStyle())
             
@@ -37,7 +38,7 @@ struct OnboardingView: View {
     
     // https://stackoverflow.com/questions/62864221/change-tabview-indicator-swiftui
     func setPageIndicatorColor() {
-      UIPageControl.appearance().currentPageIndicatorTintColor = .black
+      UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.mainPurple)
       UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
     }
     
@@ -45,7 +46,7 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(isFirstLaunching: .constant(true))
     }
 }
 
@@ -82,6 +83,8 @@ struct OnboardingSecondPage: View {
 
 // MARK: Onboarding Page 3
 struct OnboardingThirdPage: View {
+    @Binding var isFirstLaunching: Bool
+    
     var body: some View {
         VStack {
             Spacer()
@@ -93,7 +96,7 @@ struct OnboardingThirdPage: View {
             
             Spacer()
             
-            CustomButton(text: "시작하기") { }
+            CustomButton(text: "시작하기") { isFirstLaunching.toggle() }
                 .padding(.bottom, 55)
             
         }// VStack
@@ -116,6 +119,7 @@ struct CustomButton: View {
         } label: {
             RoundedRectangle(cornerRadius: 10)
                 .frame(maxHeight: 56)
+                .foregroundColor(.mainPurple)
                 .overlay {
                     Text(text)
                         .font(.headline)
