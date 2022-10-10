@@ -13,6 +13,7 @@
 		7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4D628D7652F00EF55F3 /* MainView.swift */; };
 		7AC7D4DB28D795FC00EF55F3 /* PromiseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */; };
 		7AC7D4DD28D7967E00EF55F3 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4DC28D7967E00EF55F3 /* ListComponent.swift */; };
+		7AE485D628E94009003F68F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE485D528E94009003F68F1 /* OnboardingView.swift */; };
 		89D1639728D736040079A697 /* MAROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639628D736040079A697 /* MAROApp.swift */; };
 		89D1639928D736040079A697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639828D736040079A697 /* ContentView.swift */; };
 		89D1639B28D736070079A697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639A28D736070079A697 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		7AC7D4D628D7652F00EF55F3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseListView.swift; sourceTree = "<group>"; };
 		7AC7D4DC28D7967E00EF55F3 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
+		7AE485D528E94009003F68F1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		89D1639328D736040079A697 /* MARO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D1639628D736040079A697 /* MAROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAROApp.swift; sourceTree = "<group>"; };
 		89D1639828D736040079A697 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				7AC7D4D628D7652F00EF55F3 /* MainView.swift */,
 				7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */,
 				7AC7D4DC28D7967E00EF55F3 /* ListComponent.swift */,
+				7AE485D528E94009003F68F1 /* OnboardingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				7A66D7A628D81B350039E385 /* View.swift in Sources */,
 				7AC7D4DB28D795FC00EF55F3 /* PromiseListView.swift in Sources */,
 				7A66D7A828D81E000039E385 /* Constant.swift in Sources */,
+				7AE485D628E94009003F68F1 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
