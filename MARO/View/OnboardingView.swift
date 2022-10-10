@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var isFirstLaunching: Bool
+    @State private var skipOnboarding: Bool = false
     @State private var selection: Int = 1
     
     var body: some View {
@@ -16,11 +17,16 @@ struct OnboardingView: View {
             HStack {
                 Spacer()
                 
-                Button { print("Hello I'm pressed!") }
+                Button { skipOnboarding.toggle() }
                 label: { Text("건너뛰기") }
                     .foregroundColor(.mainPurple)
                     .opacity(selection == 3 ? 0 : 1)
-                
+                    .alert("알림", isPresented: $skipOnboarding, actions: {
+                        Button("취소", action: { })
+                        Button("건너뛰기", action: { isFirstLaunching.toggle() })
+                    }) {
+                        Text("설명을 건너뛸까요?")
+                    }
             }
             .padding(.bottom, 65)
             
