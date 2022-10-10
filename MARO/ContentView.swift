@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("_isFirstLaunching") var isFirstLaunching: Bool = true
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
+        MainView()
+            .fullScreenCover(isPresented: $isFirstLaunching) {
+                OnboardingView(isFirstLaunching: $isFirstLaunching)
+            }
+    }// body
+}// ContentView
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
