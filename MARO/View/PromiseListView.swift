@@ -10,12 +10,22 @@ import SwiftUI
 struct PromiseListView: View {
     let sampleArray: [PromiseModel]
     let bottomPartHeight: CGFloat = Constant.screenHeight * 0.7
+    @State private var isActive: Bool = false
     
     init(_ sampleArray: [PromiseModel]) {
         self.sampleArray = sampleArray
     }
     
     var body: some View {
+        if #available(iOS 16.0, *) {
+            NavigationStack { bodyView }
+        } else {
+            NavigationView { bodyView }
+        }
+        
+    }// body
+    
+    private var bodyView: some View {
         VStack {
             Rectangle()
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
@@ -31,11 +41,11 @@ struct PromiseListView: View {
                 promiseListView
             }
             
-            
         }// VStack
         .background(Color.backgroundWhite)
-    }// body
-    
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+    }
     private var overlayView: some View {
         ZStack {
             VStack {
@@ -70,8 +80,9 @@ struct PromiseListView: View {
                         .padding(.bottom)
                 }
                 
-                // TODO: Link Promise Creation View with NavigationLink
-                PromiseCreationButton { }
+                PromiseCreationButton { isActive.toggle() }
+                
+                NavigationLink(destination: PromiseCreation(promise: "", memoDescription: ""), isActive: $isActive) { }
                 
                 Spacer()
             }
@@ -142,3 +153,6 @@ struct PromiseCreationButton: View {
         
     }// body
 }// PromiseCreationButton
+
+
+

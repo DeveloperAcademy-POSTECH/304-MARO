@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10148B6828DED488000274B6 /* PromiseContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10148B6628DED488000274B6 /* PromiseContainer.xcdatamodeld */; };
+		10148B6A28DEE18C000274B6 /* PromiseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10148B6928DEE18C000274B6 /* PromiseViewModel.swift */; };
+		101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B9E2128D73ED7003D9741 /* PromiseCreation.swift */; };
 		7A1E497528D9C0DE00C11481 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1E497428D9C0DE00C11481 /* Color.swift */; };
 		7A66D7A628D81B350039E385 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66D7A528D81B350039E385 /* View.swift */; };
 		7A66D7A828D81E000039E385 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A66D7A728D81E000039E385 /* Constant.swift */; };
@@ -14,9 +17,6 @@
 		7AC7D4DB28D795FC00EF55F3 /* PromiseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */; };
 		7AC7D4DD28D7967E00EF55F3 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7D4DC28D7967E00EF55F3 /* ListComponent.swift */; };
 		7AE485D628E94009003F68F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE485D528E94009003F68F1 /* OnboardingView.swift */; };
-		10148B6828DED488000274B6 /* PromiseContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10148B6628DED488000274B6 /* PromiseContainer.xcdatamodeld */; };
-		10148B6A28DEE18C000274B6 /* PromiseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10148B6928DEE18C000274B6 /* PromiseViewModel.swift */; };
-		101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B9E2128D73ED7003D9741 /* PromiseCreation.swift */; };
 		89D1639728D736040079A697 /* MAROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639628D736040079A697 /* MAROApp.swift */; };
 		89D1639928D736040079A697 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1639828D736040079A697 /* ContentView.swift */; };
 		89D1639B28D736070079A697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D1639A28D736070079A697 /* Assets.xcassets */; };
@@ -26,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10148B6728DED488000274B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		10148B6928DEE18C000274B6 /* PromiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseViewModel.swift; sourceTree = "<group>"; };
+		101B9E2128D73ED7003D9741 /* PromiseCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseCreation.swift; sourceTree = "<group>"; };
 		7A1E497428D9C0DE00C11481 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7A66D7A528D81B350039E385 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7A66D7A728D81E000039E385 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -33,9 +36,6 @@
 		7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseListView.swift; sourceTree = "<group>"; };
 		7AC7D4DC28D7967E00EF55F3 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
 		7AE485D528E94009003F68F1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		10148B6728DED488000274B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		10148B6928DEE18C000274B6 /* PromiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseViewModel.swift; sourceTree = "<group>"; };
-		101B9E2128D73ED7003D9741 /* PromiseCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseCreation.swift; sourceTree = "<group>"; };
 		89D1639328D736040079A697 /* MARO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MARO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D1639628D736040079A697 /* MAROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAROApp.swift; sourceTree = "<group>"; };
 		89D1639828D736040079A697 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,7 +99,6 @@
 		89D163A428D7361E0079A697 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89D163A528D736290079A697 /* SampleView.swift */,
 				7AC7D4D628D7652F00EF55F3 /* MainView.swift */,
 				7AC7D4DA28D795FC00EF55F3 /* PromiseListView.swift */,
 				7AC7D4DC28D7967E00EF55F3 /* ListComponent.swift */,
@@ -210,8 +209,7 @@
 				7AC7D4D728D7652F00EF55F3 /* MainView.swift in Sources */,
 				7AC7D4DD28D7967E00EF55F3 /* ListComponent.swift in Sources */,
 				7A1E497528D9C0DE00C11481 /* Color.swift in Sources */,
-				89D163AC28D736450079A697 /* SampleModel.swift in Sources */,
-				89D163A628D736290079A697 /* SampleView.swift in Sources */,
+				89D163AC28D736450079A697 /* ProMiseModel.swift in Sources */,
 				101B9E2228D73ED7003D9741 /* PromiseCreation.swift in Sources */,
 				89D163AC28D736450079A697 /* ProMiseModel.swift in Sources */,
 				10148B6828DED488000274B6 /* PromiseContainer.xcdatamodeld in Sources */,
@@ -358,6 +356,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +386,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
